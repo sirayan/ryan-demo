@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root4
+    url: jdbc:mysql://localhost/demo?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Manila
+    dbcp2:
+      test-on-borrow: true
+      validation-query: SELECT 1
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  thymeleaf:
+    cache: false
+
+
+#Server Settings
+server:
+  port: 8080
